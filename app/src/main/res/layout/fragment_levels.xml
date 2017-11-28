@@ -1,15 +1,13 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.valeriy.brainsandroid.fragments.LevelsFragment">
+    tools:context="com.example.valeriy.brainsandroid.fragments.LevelsFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/levels_fragment"
-        android:gravity="center"
-        />
+        android:id="@+id/levels_list"/>
 
-</FrameLayout>
+</LinearLayout>

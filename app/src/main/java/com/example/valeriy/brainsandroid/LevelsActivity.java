@@ -20,5 +20,7 @@ public class LevelsActivity extends AppCompatActivity {
 
         mFragmentTransaction.add(R.id.levels_fragment_container, new LevelsFragment(), LEVELS_TAG)
                 .commit();
+
+
     }
 }
