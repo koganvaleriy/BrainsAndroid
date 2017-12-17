@@ -31,7 +31,7 @@ public class LevelsListAdapter extends RecyclerView.Adapter<LevelsListAdapter.Le
 
     @Override
     public LevelsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+        Log.d("DEBUG", "onCreateViewHolder: ");
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.level_row,parent,false);
         return new LevelsViewHolder(view);
     }
@@ -40,20 +40,36 @@ public class LevelsListAdapter extends RecyclerView.Adapter<LevelsListAdapter.Le
     public void onBindViewHolder(LevelsViewHolder holder, int position) {
         Level level = levels.get(position);
         holder.id.setText(String.valueOf(level.getId()));
+        Log.d("DEBUG", "onBindViewHolder: " + position + String.valueOf(level.getId()));
+
     }
 
     @Override
     public int getItemCount() {
+        Log.d("DEBUG", "getItemCount: " + levels.size());
         return levels.size();
     }
 
-    class LevelsViewHolder extends ViewHolder {
+    public static class LevelsViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView id;
+        private final TextView id;
 
         public LevelsViewHolder(View itemView) {
             super(itemView);
-            this.id = itemView.findViewById(R.id.levels_list_id);
+
+            /*
+            // Define click listener for the ViewHolder's View.
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
+                }
+            });
+
+            */
+            this.id = (TextView)itemView.findViewById(R.id.levels_list_id);
+            Log.d("DEBUG", "LevelsViewHolder: " + id);
+
         }
     }
 }
