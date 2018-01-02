@@ -6,20 +6,35 @@ package com.example.valeriy.brainsandroid.entities;
 
 public class Level {
 
-    private int id;
+    private int mId;
+    private int mAmountOfNumbers;
+
+
+    public Level(int id, int mAmountOfNumbers) {
+        this.mId = id;
+        this.mAmountOfNumbers = mAmountOfNumbers;
+    }
 
     public Level(int id) {
-        this.id = id;
+        this.mId = id;
     }
 
     public Level() {
     }
 
     public int getId() {
-        return id;
+        return mId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.mId = id;
+    }
+
+    public int getmAmountOfNumbers() {
+        return mAmountOfNumbers;
+    }
+
+    public void setmAmountOfNumbers(int mAmountOfNumbers) {
+        this.mAmountOfNumbers = mAmountOfNumbers;
     }
 }
