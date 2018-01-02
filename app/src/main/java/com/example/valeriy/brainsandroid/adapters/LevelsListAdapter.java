@@ -89,7 +89,6 @@ public class LevelsListAdapter extends RecyclerView.Adapter<LevelsListAdapter.Le
                 }
             });
 
-
             this.id = (TextView)itemView.findViewById(R.id.levels_list_id);
             Log.d("DEBUG", "LevelsViewHolder: " + id);
 
